@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container ">
+  <h1>Welcome to the Cocktail Cafe</h1>
+  <p>Discover and enjoy a world of cocktails.</p>
+  <div class="row align-items-start g-5">
+    <div class="col" *ngFor="let item of cocktails">
+      <a [routerLink]="['/cocktails']">
+        <div class="card" style="width: 18rem;" (click)="setCocktailName(item.title)">
+          <img [src]="item.thumbnail" class="card-img-top" [alt]="item.title">
+          <div class="card-body">
+            <p class="card-text">{{item.title}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

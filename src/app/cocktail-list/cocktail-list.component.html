@@ -1,1 +1,27 @@
-<p>cocktail-list works!</p>
+<!-- <div class="row">
+  <div class="col">
+
+    <div class="col-8">
+      <p>cocktail-list works!</p>
+      <p>cocktail-list works!</p>
+      <p>cocktail-list works!</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class=" cocktail-list ">
+    <div class="card-mb-3 card h-40 card-300px" *ngFor="let cocktail of cocktailTypes">
+      <a [routerLink]="'/cocktails/' + cocktailName " (click)="setCocktailData(cocktail)">
+        <img [src]="cocktail.strDrinkThumb" class="card-img-top" [alt]="cocktail.strDrink">
+        <div class="card-body">
+          <h5 class="card-title">{{cocktail.strDrink}}</h5>
+          <p class="card-text dot-var1">{{cocktail.strCategory}}</p>
+        </div>
+        <div class="card-footer">
+          <small class="dot text-body-secondary">{{cocktail.strAlcoholic}}</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
