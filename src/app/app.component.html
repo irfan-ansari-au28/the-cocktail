@@ -1,12 +1,8 @@
-<h1>Initialized app component</h1>
-<button type="button" class="btn btn-primary">Click me</button>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
-
-<button type="button" class="btn btn-link">Link</button>
+<app-navbar></app-navbar>
+<div class="container">
+  <router-outlet></router-outlet>
+  <button type="button" class="btn btn-primary ">home</button>
+  <button type="button" class="btn btn-primary " [routerLink]="['/cocktails']">cocktail-list</button>
+  <button type="button" class="btn btn-primary " [routerLink]="['/cocktails','beer']">cocktail</button>
+  <button type="button" class="btn btn-primary " [routerLink]="['/ingredient',3242]">ingredient</button>
+</div>
