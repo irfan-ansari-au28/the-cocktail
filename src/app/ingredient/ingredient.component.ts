@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ingredient',
   templateUrl: './ingredient.component.html',
-  styleUrls: ['./ingredient.component.css']
+  styleUrls: ['./ingredient.component.css'],
 })
-export class IngredientComponent {
+export class IngredientComponent implements OnInit {
+  @Input() ingredients: any;
+  constructor() {}
 
+  ngOnInit() {}
 }

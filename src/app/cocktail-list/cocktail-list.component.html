@@ -11,7 +11,8 @@
 
 <div class="row row-cols-1 row-cols-md-3 g-4">
   <div class=" cocktail-list ">
-    <div class="card-mb-3 card h-40 card-300px" *ngFor="let cocktail of cocktailTypes">
+    <div class="card-mb-3 card h-40 card-300px" *ngFor="let cocktail of cocktailTypes"
+      [appCardShadow]="'rgba(0, 0, 0, 0.19)'">
       <a [routerLink]="'/cocktails/' + cocktailName " (click)="setCocktailData(cocktail)">
         <img [src]="cocktail.strDrinkThumb" class="card-img-top" [alt]="cocktail.strDrink">
         <div class="card-body">

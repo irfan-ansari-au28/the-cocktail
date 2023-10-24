@@ -1,1 +1,25 @@
-<p>cocktail works!</p>
+<div class="card mb-3" style="max-width: 9100%px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="cocktail.strDrinkThumb" class="img-fluid rounded-start" alt="cocktail.strDrink">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> <small class="text-body-secondary dot">{{cocktail.strAlcoholic}}</small></h5>
+        <h3 class="display-6 dot-var1  ">{{cocktail.strDrink}}</h3>
+
+        <ul class="list-group ing-table">
+          <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            Ingredient
+          </button>
+          <app-ingredient [ingredients]="ingredients"></app-ingredient>
+
+        </ul>
+        <p class="card-text">{{cocktail.strInstructions}}</p>
+        <p class="card-text">
+          <small class="text-body-secondary">Last updated {{random}} mins ago</small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

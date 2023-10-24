@@ -1,13 +1,20 @@
 <div class="container ">
-  <h1>Welcome to the Cocktail Cafe</h1>
+  <div class="filter">
+    <h4>Filter</h4>
+    <button type="button" class="btn btn-success" (click)="getDrinks('Non_alcoholic')">Non Alcoholic</button>
+    <button type="button" class="btn btn-danger" (click)="getDrinks('Alcoholic')">Alcoholic</button>
+  </div>
+  <h1>Welcome to the Cocktail Cafe!!!</h1>
   <p>Discover and enjoy a world of cocktails.</p>
+
   <div class="row align-items-start g-5">
     <div class="col" *ngFor="let item of cocktails">
-      <a [routerLink]="['/cocktails']">
-        <div class="card" style="width: 18rem;" (click)="setCocktailName(item.title)">
-          <img [src]="item.thumbnail" class="card-img-top" [alt]="item.title">
+      <a [routerLink]="['/cocktails']" [appCardShadow]="'red'">
+        <div class="card" style="width: 18rem;" (click)="setCocktailName(item.strDrink) "
+          [appCardShadow]="'rgba(0, 0, 0, 0.19)'">
+          <img [src]="item.strDrinkThumb" class="card-img-top" [alt]="item.strDrink">
           <div class="card-body">
-            <p class="card-text">{{item.title}}</p>
+            <p class="card-text">{{item.strDrink}}</p>
           </div>
         </div>
       </a>

@@ -7,10 +7,12 @@ import { CocktailComponent } from './cocktail/cocktail.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'cocktails', component: CocktailListComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'cocktails/:name', component: CocktailComponent },
   { path: 'ingredient/:id', component: IngredientComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

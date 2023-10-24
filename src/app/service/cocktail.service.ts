@@ -15,8 +15,14 @@ export class CocktailService {
     return this.http.get(url);
   }
 
-  // getCocktailById(id: string): Observable<any> {
-  //   const url = `${this.apiBaseUrl}/lookup.php?i=${id}`;
-  //   return this.http.get(url);
-  // }
+  getCocktailById(id: string): Observable<any> {
+    const url = `${this.apiBaseUrl}/lookup.php?i=${id}`;
+    return this.http.get(url);
+  }
+  getCocktailByAlcoholic(alcoholic: string): Observable<any> {
+    // www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic
+    // www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
+    const url = `${this.apiBaseUrl}/filter.php?a=${alcoholic}`;
+    return this.http.get(url);
+  }
 }
